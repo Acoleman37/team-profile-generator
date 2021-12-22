@@ -1,26 +1,33 @@
-// using Engineer constructor 
-const Engineer = require('../lib/Engineer');
+// using Employee constructor 
+const Employee = require('../lib/Employee');
+ 
+// creating employee object  
+test('creates an employee object', () => {
+    const employee = new employee('Alec', '37', 'aleccoleman123@gmail', 'Acoleman37');
 
-// creating engineer object  
-test('creates an Engineer object', () => {
-    const engineer = new Engineer('Alec', '37', 'aleccoleman123@gmail', 'Acoleman37');
-
-    expect(engineer.name).toEqual(expect.any(String));
-    expect(engineer.id).toEqual(expect.any(Number));
-    expect(engineer.email).toEqual(expect.any(String));
-    expect(engineer.github) .toEqual(expect.any(String));
+    expect(employee.name).toEqual(expect.any(String));
+    expect(employee.id).toEqual(expect.any(Number));
+    expect(employee.email).toEqual(expect.any(String));
+    expect(employee.github) .toEqual(expect.any(String));
 });
 
-// gets github from getGithub()
-test('gets engineer github value', () => {
-    const engineer = new Engineer('Alec', '37', 'aleccoleman123@gmail', 'Acoleman37');
+// gets id from getId() 
+test('gets employee ID', () => {
+    const employee = new Employee('Alec', '37', 'aleccoleman123@gmail', 'Acoleman37');
 
-    expect(engineer.getGithub()).toEqual(expect.stringContaining(engineer.github.toString()));
-})
+    expect(employee.getId()).toEqual(expect.any(Number));
+});
+
+// gets emails from getEmail()
+test('gets employee email', () => {
+    const employee = new Employee('Alec', '37', 'aleccoleman123@gmail', 'Acoleman37');
+
+    expect(employee.getEmail()).toEqual(expect.stringContaining(employee.email.toString()));
+});
 
 // gets role from getRole() 
 test('gets role of employee', () => {
-    const engineer = new Engineer('Alec', '37', 'aleccoleman123@gmail', 'Acoleman37');
+    const employee = new Employee('Alec', '37', 'aleccoleman123@gmail', 'Acoleman37');
 
-    expect(engineer.getRole()).toEqual("Engineer");
+    expect(employee.getRole()).toEqual("employee");
 })
