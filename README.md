@@ -1,5 +1,7 @@
 # team-profile-generator
 
+<iframe src="https://drive.google.com/file/d/1pJyiUfiSgx8MzI_UzPLctaSQZ8cJAa-H/preview" width="640" height="480"></iframe>
+
 GIVEN a command-line application that accepts user input
 WHEN I am prompted for my team members and their information
 THEN an HTML file is generated that displays a nicely formatted team roster based on user input
